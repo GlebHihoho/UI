@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/shopItem.uss?fileID=7433441132597879392&amp;guid=fdf6174f1cee9cb4491f27c2322a008f&amp;type=3#shopItem" />
+    <Style src="project://database/Assets/UI/button.uss?fileID=7433441132597879392&amp;guid=c465cdbbdb0c221469169ebb2b7ba17c&amp;type=3#button" />
+    <ui:VisualElement name="mainContainer" style="width: 100%; height: 100%; align-items: center; justify-content: center;">
+        <ui:VisualElement name="shopContainer" style="width: 800px; height: 600px; background-color: rgba(0, 0, 0, 0.12); border-left-color: rgb(253, 253, 253); border-right-color: rgb(253, 253, 253); border-top-color: rgb(253, 253, 253); border-bottom-color: rgb(253, 253, 253); border-left-width: 5px; border-right-width: 5px; border-top-width: 5px; border-bottom-width: 5px; border-top-left-radius: 50px; border-bottom-left-radius: 50px; border-top-right-radius: 50px; border-bottom-right-radius: 50px; padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px; opacity: 1;">
+            <ui:VisualElement name="header" style="width: 100%; height: 100px; flex-direction: row-reverse; align-items: center; justify-content: space-between;">
+                <ui:Button text="X" display-tooltip-when-elided="true" name="closeButton" class="btn" />
+                <ui:Label text="Shop" display-tooltip-when-elided="true" style="-unity-font: url(&apos;project://database/Assets/UI/Fonts/Disket-Mono-Bold.ttf?fileID=12800000&amp;guid=3a205d0fac257b147b50032d56778c1e&amp;type=3#Disket-Mono-Bold&apos;); font-size: 50px; color: rgb(255, 255, 255);" />
+            </ui:VisualElement>
+            <ui:ScrollView scroll-deceleration-rate="0,135" elasticity="0,1" name="scrollContainer" style="width: 100%; height: 100%; margin-top: 20px; padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); border-left-width: 5px; border-right-width: 5px; border-top-width: 5px; border-bottom-width: 5px; border-top-left-radius: 20px; border-bottom-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px; background-color: rgba(0, 80, 185, 0.4);" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

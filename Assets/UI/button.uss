@@ -1,0 +1,45 @@
+.btn {
+    width: 80px;
+    height: 80px;
+    color: rgba(255, 255, 255, 255);
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    border-left-color: rgba(255, 255, 255, 255);
+    border-right-color: rgba(255, 255, 255, 255);
+    border-top-color: rgba(255, 255, 255, 255);
+    border-bottom-color: rgba(255, 255, 255, 255);
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition-duration: 0.3s;
+    -unity-font: url('project://database/Assets/UI/Fonts/Disket-Mono-Regular.ttf?fileID=12800000&guid=6dee0eabe6c01954093521d9d0b6d852&type=3#Disket-Mono-Regular');
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.btn:hover {
+    border-left-color: rgba(250, 247, 20, 255);
+    border-right-color: rgba(250, 247, 20, 255);
+    border-top-color: rgba(250, 247, 20, 255);
+    border-bottom-color: rgba(250, 247, 20, 255);
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 85px;
+    height: 85px;
+    color: rgba(255, 253, 0, 255);
+}
