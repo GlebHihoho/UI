@@ -8,7 +8,7 @@
             <ui:Label text="50$" display-tooltip-when-elided="true" name="itemCost" style="-unity-font: url(&apos;project://database/Assets/UI/Fonts/Disket-Mono-Regular.ttf?fileID=12800000&amp;guid=6dee0eabe6c01954093521d9d0b6d852&amp;type=3#Disket-Mono-Regular&apos;); font-size: 50px; flex-wrap: nowrap; white-space: normal; color: rgb(255, 255, 255);" />
         </ui:VisualElement>
         <ui:VisualElement name="actionContainer" style="align-items: center; justify-content: center; width: 100px;">
-            <ui:Button text="+" display-tooltip-when-elided="true" class="btn" />
+            <ui:Button text="-" display-tooltip-when-elided="true" name="removeBtn" class="btn" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
