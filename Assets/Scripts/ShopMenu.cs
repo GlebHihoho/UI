@@ -65,6 +65,7 @@ public class ShopMenu : MonoBehaviour
 
         Label label = newElement.Q<Label>("itemTitle");
         label.text = _nameField.value;
+        _nameField.value = "";
         Button removeButton = newElement.Q<Button>("removeBtn");
 
         removeButton.clicked += () => RemoveItem(newElement);
