@@ -14,6 +14,8 @@ public class ShopMenu : MonoBehaviour
     [SerializeField] private VisualTreeAsset shopItemTemplate;
 
     private ScrollView _scrollContainer;
+    private Button _addNameButton;
+    private TextField _nameField;
     private readonly Dictionary<string, string> _shopItems = new Dictionary<string, string>()
     {
         { "cat", "50$" },
@@ -28,11 +30,18 @@ public class ShopMenu : MonoBehaviour
 
     void Start()
     {
-        _scrollContainer = GetComponent<UIDocument>().rootVisualElement.Q<ScrollView>("scrollContainer");
+        var rootElement = GetComponent<UIDocument>().rootVisualElement;
 
-        Button closeButton = GetComponent<UIDocument>().rootVisualElement.Q<Button>("closeButton");
+        _scrollContainer = rootElement.Q<ScrollView>("scrollContainer");
+
+        Button closeButton = rootElement.Q<Button>("closeButton");
+
+        _addNameButton = rootElement.Q<Button>("addNameBtn");
+        _nameField = rootElement.Q<TextField>("nameField");
 
         closeButton.clicked += () => CloseButton();
+
+        _addNameButton.clicked += () => AddNewItem();
 
         foreach (var item in _shopItems)
         {
@@ -50,6 +59,20 @@ public class ShopMenu : MonoBehaviour
         }
     }
 
+    private void AddNewItem()
+    {
+        VisualElement newElement = shopItemTemplate.CloneTree();
+
+        Label label = newElement.Q<Label>("itemTitle");
+        label.text = _nameField.value;
+        Button removeButton = newElement.Q<Button>("removeBtn");
+
+        removeButton.clicked += () => RemoveItem(newElement);
+        _scrollContainer.Add(newElement);
+
+        source.PlayOneShot(clickSound);
+    }
+
     private void CloseButton()
     {
         source.PlayOneShot(clickSound);
@@ -59,6 +82,5 @@ public class ShopMenu : MonoBehaviour
     {
         source.PlayOneShot(removeSound);
         _scrollContainer.Remove(element);
-        // _shopItems.Remove(key);
     }
 }
